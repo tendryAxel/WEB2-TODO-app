@@ -1,15 +1,19 @@
 import { useState } from "react";
+import style from "../../styles/Home.module.css";
 
 export default function InputTodo ({addliste}) {
     const [inputValue, setInput, clearInput] = useInput()
 
     return (
-        <div>
-        <input type="text" value={inputValue} onChange={setInput} />
-        <button onClick={()=>{
-            addliste(inputValue);
-            clearInput();
-            }}>Add</button>
+        <div className={style.inputTodo}>
+            <p>Pour ajouter une nouvelle tache</p>
+            <div>
+                <input type="text" value={inputValue} onChange={setInput} className={style.inputToAdd} />
+                <button onClick={()=>{
+                    addliste(inputValue);
+                    clearInput();
+                    }} className={style.inputToAdd}>Add</button>
+            </div>
         </div>
         )
 };

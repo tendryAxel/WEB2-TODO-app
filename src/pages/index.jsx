@@ -52,8 +52,8 @@ export default function Home() {
   const [liste, addliste, removeInListe, updateInListe] = manipListe()
 
   return (
-    <div>
-      <InputTodo addliste={addliste}/>
+    <div className={styles.todo}>
+      <InputTodo addliste={addliste} />
       <ListeTodo 
         liste={liste}
         removeInListe={removeInListe}
