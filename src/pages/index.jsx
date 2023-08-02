@@ -29,9 +29,11 @@ function manipListe (){
     const [liste, setliste] = useState([])
 
     const add = (input) => {
-      let newListe = [...liste];
-      newListe.push(input);
-      setliste(newListe);
+      if (input != ""){
+        let newListe = [...liste];
+        newListe.push(input);
+        setliste(newListe);
+      }
     }
 
     const removeInListe = (index) => {
@@ -40,9 +42,11 @@ function manipListe (){
     }
 
     const updateInListe = (index, input) => {
-      let newListe = [...liste];
-      newListe[index] = input;
-      setliste(newListe);
+      if (input != ""){
+        let newListe = [...liste];
+        newListe[index] = input;
+        setliste(newListe);
+      }
     }
 
     return [liste, add, removeInListe, updateInListe]
