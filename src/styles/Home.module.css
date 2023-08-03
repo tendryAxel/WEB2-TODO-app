@@ -51,6 +51,7 @@
 .listeStyle{
   list-style: none;
   display: flex;
+  flex-direction: column;
   gap: 10px;
   flex-wrap: wrap;
   overflow-y: hidden;
@@ -66,4 +67,7 @@
   border-radius: 50px;
   width: 80vw;
   padding: 50px;
+}
+.buttonSection{
+  display: flex;
 }
