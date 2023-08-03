@@ -8,7 +8,7 @@ export default function ListeTodo({ liste, removeInListe, updateInListe }) {
         <>
             <div className={style.updateDiv}>
                 <div className={style.inputUpdate}>
-                    <p>Pour mettre a jour la tache de votre choix : </p>
+                    <p>Pour mettre a jour la tache de votre choix, remplir ici</p>
                     <input type="text" value={inputValue} onChange={setInput} />
                 </div>
                 <p>Ensuite il faut choisir la tache a mettre a jour</p>
@@ -17,11 +17,11 @@ export default function ListeTodo({ liste, removeInListe, updateInListe }) {
                 {liste.map((item, index) => {
                     return <li key={index} className={style.listeStyle}>
                         <p>{index} - {item}</p>
-                        <button onClick={()=>removeInListe(index)}>X</button>
+                        <button onClick={()=>removeInListe(index)}>Delete</button>
                         <button onClick={()=>{
                             updateInListe(index, inputValue);
                             clearInput();
-                            }}>U</button>
+                            }}>Update this</button>
                     </li>;
                 })}
             </ul>
